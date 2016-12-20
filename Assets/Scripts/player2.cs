@@ -25,12 +25,12 @@ using System.Collections;
 		}
 
 		if (Input.GetKey ("w")) {
-			rb.velocity = new Vector2 (velocidad * power, rb.velocity.y);
+			rb.velocity = new Vector2 (velocidad * power, rb.velocity.x);
 			transform.localScale = new Vector3 (1, 1, 1);
 		}
 
 		if (Input.GetKeyUp ("w")) {
-			rb.velocity = new Vector2 (0, rb.velocity.y);
+			rb.velocity = new Vector2 (0, rb.velocity.x);
 		}
 
 		if (Input.GetKey ("a")) {
@@ -42,11 +42,11 @@ using System.Collections;
 		}
 
 		if (Input.GetKey ("s")) {
-			rb.velocity = new Vector2 (-velocidad * power, rb.velocity.y);
+			rb.velocity = new Vector2 (-velocidad * power, rb.velocity.x);
 			transform.localScale = new Vector3 (-1, 1, 1);
 		}
 		if (Input.GetKeyUp ("s")) {
-			rb.velocity = new Vector2 (0, rb.velocity.y);
+			rb.velocity = new Vector2 (0, rb.velocity.x);
 		}
 	}
 }

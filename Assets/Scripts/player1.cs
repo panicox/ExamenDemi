@@ -25,12 +25,12 @@ public class player1 : MonoBehaviour {
 		}
 
 		if (Input.GetKey (KeyCode.UpArrow)) {
-			rb.velocity = new Vector2 (velocidad * power, rb.velocity.y);
+			rb.velocity = new Vector2 (velocidad * power, rb.velocity.x);
 			transform.localScale = new Vector3 (1, 1, 1);
 		}
 
 		if (Input.GetKeyUp (KeyCode.UpArrow)) {
-			rb.velocity = new Vector2 (0, rb.velocity.y);
+			rb.velocity = new Vector2 (0, rb.velocity.x);
 		}
 
 		if (Input.GetKey (KeyCode.LeftArrow)) {
@@ -43,11 +43,11 @@ public class player1 : MonoBehaviour {
 		}
 
 		if (Input.GetKey (KeyCode.DownArrow)) {
-			rb.velocity = new Vector2 (-velocidad * power, rb.velocity.y);
+			rb.velocity = new Vector2 (-velocidad * power, rb.velocity.x);
 			transform.localScale = new Vector3 (-1, 1, 1);
 		}
 		if (Input.GetKeyUp (KeyCode.DownArrow)) {
-			rb.velocity = new Vector2 (0, rb.velocity.y);
+			rb.velocity = new Vector2 (0, rb.velocity.x);
 		}
 	}
 }
