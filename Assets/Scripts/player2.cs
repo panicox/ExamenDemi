@@ -7,7 +7,7 @@ using System.Collections;
 	public float power = 1f;
 	private Rigidbody2D rb;
 
-	void start (){
+	void Start (){
 		
 		rb = GetComponent<Rigidbody2D> ();
 	}
@@ -35,7 +35,7 @@ using System.Collections;
 
 		if (Input.GetKey ("a")) {
 			rb.velocity = new Vector2 (-velocidad * power, rb.velocity.y);
-			transform.localScale = new Vector3 (-1, 1, 1);
+			transform.localScale = new Vector3 (1, 1, 1);
 		}
 		if (Input.GetKeyUp ("a")) {
 			rb.velocity = new Vector2 (0, rb.velocity.y);

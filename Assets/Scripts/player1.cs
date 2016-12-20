@@ -7,7 +7,7 @@ public class player1 : MonoBehaviour {
 	public float power = 1f;
 	private Rigidbody2D rb;
 
-	void start (){
+	void Start (){
 
 		rb = GetComponent<Rigidbody2D> ();
 	}
@@ -15,38 +15,38 @@ public class player1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKey ("right")) {
+		if (Input.GetKey (KeyCode.RightArrow)) {
 			rb.velocity = new Vector2 (velocidad * power, rb.velocity.y);
 			transform.localScale = new Vector3 (1, 1, 1);
 		}
 
-		if (Input.GetKeyUp ("right")) {
+		if (Input.GetKeyUp (KeyCode.RightArrow)) {
 			rb.velocity = new Vector2 (0, rb.velocity.y);
 		}
 
-		if (Input.GetKey ("up")) {
+		if (Input.GetKey (KeyCode.UpArrow)) {
 			rb.velocity = new Vector2 (velocidad * power, rb.velocity.y);
 			transform.localScale = new Vector3 (1, 1, 1);
 		}
 
-		if (Input.GetKeyUp ("up")) {
+		if (Input.GetKeyUp (KeyCode.UpArrow)) {
 			rb.velocity = new Vector2 (0, rb.velocity.y);
 		}
 
-		if (Input.GetKey ("left")) {
+		if (Input.GetKey (KeyCode.LeftArrow)) {
 			rb.velocity = new Vector2 (-velocidad * power, rb.velocity.y);
-			transform.localScale = new Vector3 (-1, 1, 1);
+			transform.localScale = new Vector3 (1, 1, 1);
 		}
 
-		if (Input.GetKeyUp ("left")) {
+		if (Input.GetKeyUp (KeyCode.LeftArrow)) {
 			rb.velocity = new Vector2 (0, rb.velocity.y);
 		}
 
-		if (Input.GetKey ("down")) {
+		if (Input.GetKey (KeyCode.DownArrow)) {
 			rb.velocity = new Vector2 (-velocidad * power, rb.velocity.y);
 			transform.localScale = new Vector3 (-1, 1, 1);
 		}
-		if (Input.GetKeyUp ("down")) {
+		if (Input.GetKeyUp (KeyCode.DownArrow)) {
 			rb.velocity = new Vector2 (0, rb.velocity.y);
 		}
 	}
